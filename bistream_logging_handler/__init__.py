@@ -6,7 +6,7 @@ package of logging handler which divides output by log level
 import sys
 import logging
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __url = 'https://github.com/tetutaro/bistream_logging_handler'
 __author = 'maruyama'
 
@@ -42,7 +42,7 @@ class BistreamLoggingHandler(logging.Handler):
 				stream = sys.stderr
 			stream.write(msg)
 			stream.write(self.terminator)
-			self.flush()
+			stream.flush()
 		except Exception:
 			self.handleError(record)
 		return

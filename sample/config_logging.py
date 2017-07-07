@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import os
+import logging
 
 config_logging_dict = {
 	'version': 1,
@@ -16,6 +17,7 @@ config_logging_dict = {
 			'class': 'bistream_logging_handler.BistreamLoggingHandler',
 			'level': 'DEBUG',
 			'formatter': 'bistream',
+			'threshold': logging.WARNING,
 		},
 	},
 	'loggers': {
